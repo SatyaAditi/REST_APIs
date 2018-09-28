@@ -54,7 +54,7 @@ public class DataManager {
 	}
 	
 	@Path("/insertinfo")
-	@GET
+	@POST
 	@Produces(MediaType.TEXT_HTML)
 	public String insertinfo(@QueryParam("id")int id,@QueryParam("name")String username,@QueryParam("password")String password)
 	{
@@ -75,6 +75,12 @@ public class DataManager {
 		
 
     }
+	
+	
+	
+	
+	
+	
 	@Path("/updateinfo")
 	@GET
 	@Produces(MediaType.TEXT_HTML)
