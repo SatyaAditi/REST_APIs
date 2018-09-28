@@ -43,8 +43,7 @@ public class DataManager {
 	  
 	 }
 	conn.close();
-	//GenericEntity<ArrayList<String>> entity = new GenericEntity<ArrayList<String>>(list) {};
-	//return list;
+	
 	}
 	catch (SQLException e) {
 		
@@ -67,6 +66,36 @@ public class DataManager {
 		
 			stmt.executeUpdate(sql);
 			conn.close();
+	    return responsenew="inserted successfully";
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			return responsenew="error";
+		}
+		
+
+    }
+	@Path("/updateinfo")
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public String updateinfo(@QueryParam("id")int id,@QueryParam("name")String newusername,@QueryParam("password")String newpassword)
+	{
+		String responsenew="";
+		Statement stmt;
+		try {
+		stmt=conn.createStatement();
+		if(newusername==null)
+		{
+		String sql="update user set password="+ newpassword + "where id="+id ;
+		
+			stmt.executeUpdate(sql);
+		}
+		else if(newpassword==null)
+		{
+			String sql="update user set username="+ newusername + "where id="+id ;
+			stmt.executeUpdate(sql);
+		}
+			conn.close();
 	    return responsenew="updated successfully";
 		} catch (SQLException e) {
 			
@@ -75,7 +104,34 @@ public class DataManager {
 		}
 		
 
+    }
+	
+	@Path("/deleteinfo")
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public String deleteinfo(@QueryParam("id")int id)
+	{
+		String responsenew="";
+		Statement stmt;
+		try {
+		stmt=conn.createStatement();
+		
+		String sql="delete from user where id="+id;
+		
+		
+			stmt.executeUpdate(sql);
+		
+			conn.close();
+	    return responsenew="deleted successfully";
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			return responsenew="error";
 		}
+		
+
+    }
+	
 	
 	
 }
