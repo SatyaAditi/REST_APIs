@@ -21,15 +21,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class DataManager {
 	DbManager db= new DbManager();
 	Connection conn=db.getConnection();
-	ArrayList<String> list=new ArrayList<>();
+	ArrayList<Response> list=new ArrayList<>();
 	@Path("/showdata")
 	@GET
 	
 	@Produces(MediaType.APPLICATION_XML)
-	public String getinfo()
+	public ArrayList<Response> getinfo()
 	{
-    String response = null;
-	
+   
+	String response=null;
 	Statement stmt;
 	try {
 		stmt = conn.createStatement();
@@ -37,19 +37,21 @@ public class DataManager {
 	ResultSet rs=stmt.executeQuery("select * from user");
 	while(rs.next())
 	{
-	  response="<?xml version=1.0?>"+ "name " + "<name>"+ rs.getString(2) +"</name>";
-	  //list.add(response);
+	  response= "name " + rs.getString(2) ;
+	  Response res=new Response(response);
+	  list.add(res);
 	  
 	 }
 	conn.close();
 	//GenericEntity<ArrayList<String>> entity = new GenericEntity<ArrayList<String>>(list) {};
-	return response;
+	//return list;
 	}
 	catch (SQLException e) {
 		
 		e.printStackTrace();
-		return response="error";
+		
 	}
+	return list;
 	}
 	
 	@Path("/insertinfo")
