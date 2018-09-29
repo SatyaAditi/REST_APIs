@@ -10,10 +10,10 @@ public class HomeController  {
     
 	@RequestMapping("home")
 	
-	public ModelAndView home(@RequestParam("name") String name)
+	public ModelAndView home(DemoPerson demo)
 	{
 		ModelAndView mv= new ModelAndView();
-		mv.addObject("name",name);
+		mv.addObject("demoobj",demo);
 		mv.setViewName("HomeView");
 		
 		return mv;
