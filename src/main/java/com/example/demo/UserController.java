@@ -1,11 +1,16 @@
 package com.example.demo;
 
+import java.util.List;
 import java.util.Optional;
+
+import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -34,22 +39,41 @@ public class UserController {
     	   return "UserView";
        }
 	   
-	   @RequestMapping("/getuser")
-	   public ModelAndView getuser(@RequestParam int id)
+	   @RequestMapping("/user")
+	   @ResponseBody
+	   public List<User> getusers()
 	   {
-		   ModelAndView mv=new ModelAndView("showuser");
+		  // ModelAndView mv=new ModelAndView("showuser");
 		  
 		 
-		   User user=  repo.findById(id).orElse(new User());//Feature by java 8,if the id doesnt exist ,optional will take care if it. Or else we can type .oeElse and create a new null object and if the id is not present it will show null.
+		  /* User user=  repo.findById(id).orElse(new User());//Feature by java 8,if the id doesnt exist ,optional will take care if it. Or else we can type .oeElse and create a new null object and if the id is not present it will show null.
 		   
 		   System.out.println(repo.findByamount(1000));
 		   System.out.println(repo.findByamountGreaterThan(30));
-		   System.out.println(repo.findByamountSorted(20));
-		   mv.addObject(user);
+		   System.out.println(repo.findByamountSorted(20));*/
+		  /* mv.addObject(user);
 		   
-		   return mv;
+		   return mv;*/
+		   return repo.findAll();
+		   
 	   }
 	   
-	  
+	   @RequestMapping("/user/{id}")
+	   @ResponseBody
+	   public Optional<User> getuser(@PathVariable("id") int id)
+	   {
+		  // ModelAndView mv=new ModelAndView("showuser");
+		  
+		 
+		  /* User user=  repo.findById(id).orElse(new User());//Feature by java 8,if the id doesnt exist ,optional will take care if it. Or else we can type .oeElse and create a new null object and if the id is not present it will show null.
+		   
+		   System.out.println(repo.findByamount(1000));
+		   System.out.println(repo.findByamountGreaterThan(30));
+		   System.out.println(repo.findByamountSorted(20));*/
+		  /* mv.addObject(user);
+		   
+		   return mv;*/
+		   return repo.findById(id);		   
+	   }
 	   
 }
