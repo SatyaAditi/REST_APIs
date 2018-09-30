@@ -41,9 +41,15 @@ public class UserController {
 		  
 		 
 		   User user=  repo.findById(id).orElse(new User());//Feature by java 8,if the id doesnt exist ,optional will take care if it. Or else we can type .oeElse and create a new null object and if the id is not present it will show null.
+		   
+		   System.out.println(repo.findByamount(1000));
+		   System.out.println(repo.findByamountGreaterThan(30));
+		   System.out.println(repo.findByamountSorted(20));
 		   mv.addObject(user);
 		   
 		   return mv;
 	   }
+	   
+	  
 	   
 }
