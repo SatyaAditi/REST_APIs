@@ -22,6 +22,10 @@ public class User {
 	public String getName() {
 		return name;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", amount=" + amount + "]";
+	}
 	public void setName(String name) {
 		this.name = name;
 	}

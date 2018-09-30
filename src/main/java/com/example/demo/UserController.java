@@ -1,8 +1,11 @@
 package com.example.demo;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -20,18 +23,27 @@ public class UserController {
 		
 	    mv.setViewName("UserView");
 		
-			
-			
 			return mv;
-			
-			
-			
 		}
 
 	   @RequestMapping("/adduser")
        public String addUser(User u)
        {
-		   repo.save(u);
+		   repo.save(u);//as it extends crud
+		   //repo directly saves the value in the database as it extends crud repository which does create ,update and stuff.All this is managed by JPA.JPA created the tabel based on the variables in the user class with id as primary key.
     	   return "UserView";
        }
+	   
+	   @RequestMapping("/getuser")
+	   public ModelAndView getuser(@RequestParam int id)
+	   {
+		   ModelAndView mv=new ModelAndView("showuser");
+		  
+		 
+		   User user=  repo.findById(id).orElse(new User());//Feature by java 8,if the id doesnt exist ,optional will take care if it. Or else we can type .oeElse and create a new null object and if the id is not present it will show null.
+		   mv.addObject(user);
+		   
+		   return mv;
+	   }
+	   
 }
