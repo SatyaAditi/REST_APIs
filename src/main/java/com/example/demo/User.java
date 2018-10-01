@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
-
+//This class is model class
 @Component
 @Entity
 public class User {
