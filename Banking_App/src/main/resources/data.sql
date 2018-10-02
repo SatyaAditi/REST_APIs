@@ -1,0 +1,1 @@
+ insert into user values('raj',3001,'1993-04-16','raj_04@yahoo.co.in','raju');
