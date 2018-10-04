@@ -13,7 +13,7 @@ Current Account_balance :
 
 <form action="addaccount" method="post">
 
-Account Number : <input type="text" name="account_no">
+Account Number : <input type="text" name="account_no"><br>
 Add Initial  Balance : <input type="text" name="account_balance">
 
 <button>submit</button>
@@ -22,10 +22,10 @@ Add Initial  Balance : <input type="text" name="account_balance">
 <hr>
 <form action="update" method="post">
 
-Account Number : <input type="text" name="account_no">
-Add Balance : <input type="text" name="account_balance">
-Amount to Deposit : <input type="text" name="amount_deposited">
-Amount to Withdraw : <input type="text" name="amount_withdrawn">
+Account Number : <input type="text" name="account_no"><br>
+Add Balance : <input type="text" name="account_balance"><br>
+Amount to Deposit : <input type="text" name="amount_deposited"><br>
+Amount to Pay Bills : <input type="text" name="amount_withdrawn"><br>
 <button>submit</button>
 </form>
 
@@ -33,9 +33,9 @@ Amount to Withdraw : <input type="text" name="amount_withdrawn">
 <h3>If you want to send money to someone</h3>
 <form action="send" method="post">
 
-Account Number : <input type="text" name="account_no">
-Sender's Account Number : <input type="text" name="saccount_no">
-Add amount to send : <input type="text" name="amount">
+Account Number : <input type="text" name="account_no"><br>
+Sender's Account Number : <input type="text" name="saccount_no"><br>
+Add amount to send : <input type="text" name="amount"><br>
 
 <button>submit</button>
 </form>

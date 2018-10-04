@@ -12,6 +12,8 @@ public class AccountController {
 
 	@Autowired
 	AccountRepo repo;
+	@Autowired
+	MiddleRepo middlerepo;
 	@PostMapping("addaccount")
 	public Account_details addaccount(@RequestParam double account_balance,@RequestParam double account_no,Account_details a)
 	{
@@ -20,7 +22,9 @@ public class AccountController {
 		
 		a.setAccount_balance(account_balance);
 		repo.save(a);
-		
+		Account_details ad=repo.getOne(account_no);
+		ad.getAccount_no();
+		//middlerepo.save(a);
 		return a;
 	}
 	

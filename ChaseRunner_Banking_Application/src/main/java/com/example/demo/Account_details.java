@@ -2,10 +2,12 @@ package com.example.demo;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.SecondaryTable;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="account_details")
+@SecondaryTable(name="middle")
 public class Account_details {
     @Id
 	private double account_no;
