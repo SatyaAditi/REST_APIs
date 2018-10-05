@@ -11,7 +11,7 @@
 
 <hr>
 <h3>Already have an account,please sign in</h3>
-<form action="profile" method="post">
+<form action="signin" method="post">
 Name : <input type="text" name="name">
 Password : <input type="password" name="password">
 <button type="submit">submit</button>
