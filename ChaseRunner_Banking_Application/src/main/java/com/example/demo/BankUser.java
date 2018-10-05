@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="bankuser")
-@SecondaryTable(name="Middle")
+@SecondaryTable(name="middle")
 public class BankUser {
     
 	@Id

@@ -8,10 +8,16 @@ import javax.persistence.Table;
 @Table(name="middle")
 public class Middle {
     @Id 
-	private int id;
+	
 	private double account_no;
+    private int id;
 	public int getId() {
 		return id;
+	}
+	public Middle(int id, double account_no) {
+		super();
+		this.id = id;
+		this.account_no = account_no;
 	}
 	@Override
 	public String toString() {
