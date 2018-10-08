@@ -1,9 +1,5 @@
 package com.example.demo;
 
-<<<<<<< HEAD
-=======
-import java.util.HashMap;
->>>>>>> fcd4c895cc58ff91fa5af67271c42d0c8458c6fa
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +12,6 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 public class LoginController {
 
 
-<<<<<<< HEAD
 public boolean validateUser(UserRepo repo, String email,String password)
 {
 	List<BankUser> emaillist=repo.findByemail(email);
@@ -58,47 +53,3 @@ public boolean firstTimeLogin(AccountRepo arepo,UserRepo repo, String email)
 	return true;
 }
 }
-=======
-public boolean validateUser(UserRepo repo, String name,String password)
-{
-	List<BankUser> namelist=repo.findByname(name);
-	System.out.println(namelist);
-	List<BankUser> passwordlist = repo.findBypassword(password);
-	System.out.println(passwordlist);
-	HashMap<String,String> hm=new HashMap<>();
-	UserController uc=new UserController();
-	hm=uc.map;
-	String uname = null,upassword;
-	if(namelist ==null || passwordlist==null)
-	{
-		return false;
-	}
-	else
-	{
-		for(BankUser u:namelist ) {
-			 uname=u.getName();
-			
-			 {
-		for(BankUser b:passwordlist)
-		{
-			upassword=b.getPassword();
-			if(upassword==hm.get(uname))
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-			
-		}
-		}
-		
-	}
-	
-     }
-
-	return false;
-}
-}
->>>>>>> fcd4c895cc58ff91fa5af67271c42d0c8458c6fa

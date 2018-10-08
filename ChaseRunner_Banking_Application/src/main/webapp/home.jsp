@@ -12,12 +12,8 @@
 <hr>
 <h3>Already have an account,please sign in</h3>
 <form action="signin" method="post">
-<<<<<<< HEAD
 
 Email : <input type="text" name="email">
-=======
-Name : <input type="text" name="name">
->>>>>>> fcd4c895cc58ff91fa5af67271c42d0c8458c6fa
 Password : <input type="password" name="password">
 <button type="submit">submit</button>
 

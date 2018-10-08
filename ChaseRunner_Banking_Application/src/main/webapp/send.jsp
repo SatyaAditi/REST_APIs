@@ -9,11 +9,7 @@
 <body>
 <form action="send" method="post">
 
-<<<<<<< HEAD
 <input type="hidden" value=${bu.email} name="user_email">
-=======
-
->>>>>>> fcd4c895cc58ff91fa5af67271c42d0c8458c6fa
 Sender's Account Number : <input type="text" name="saccount_no"><br>
 Add amount to send : <input type="text" name="amount"><br>
 

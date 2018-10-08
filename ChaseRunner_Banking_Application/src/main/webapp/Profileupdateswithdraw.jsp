@@ -7,15 +7,6 @@
 <title>To Pay Bills</title>
 </head>
 <body>
-<<<<<<< HEAD
-=======
-<form action="updatewithdraw" method="post">
-Where are you paying bills : <input type="text" name="reason">
-
-Amount to pay : <input type="text" name="amount_withdrawn">
-<button> submit </button>
-</form>
->>>>>>> fcd4c895cc58ff91fa5af67271c42d0c8458c6fa
 
 </body>
 </html>
