@@ -7,6 +7,7 @@
 <title>User Profile</title>
 </head>
 <body>
+<<<<<<< HEAD
 <h3>Welcome ${bu.email}</h3>
 <br>
 <form action="accountinfo" method="post">
@@ -46,6 +47,38 @@ Add amount to send : <input type="text" name="amount"><br>
 </form>
 
 
+=======
+<h3>Welcome ${bu.name}</h3>
+<br>
+Account_no: ${ad.account_no}
+Current Account_balance : ${ad.account_balance}
+
+
+<form action="addaccount" method="post">
+
+Account Number : <input type="text" name="account_no" ><br>
+Add Initial  Balance : <input type="text" name="account_balance">
+
+<button>submit</button><br>
+</form>
+
+
+<form action="ProfileUpdates.jsp">
+<button>To deposit money</button><br>
+
+</form>
+
+<form action="Profileupdateswithdraw.jsp">
+<button>To pay bills</button><br>
+
+</form>
+
+<hr>
+<h3>If you want to send money to someone</h3>
+<form action="send.jsp">
+<button>To send money</button><br>
+</form>
+>>>>>>> fcd4c895cc58ff91fa5af67271c42d0c8458c6fa
 </body>
 
 

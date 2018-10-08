@@ -4,7 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+<<<<<<< HEAD
 
+=======
+@Entity
+>>>>>>> fcd4c895cc58ff91fa5af67271c42d0c8458c6fa
 @Table(name="middle")
 public class Middle {
     @Id 

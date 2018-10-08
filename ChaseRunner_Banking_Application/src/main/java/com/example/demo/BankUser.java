@@ -1,5 +1,6 @@
 package com.example.demo;
 
+<<<<<<< HEAD
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -16,10 +17,23 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name="bankuser")
 
+=======
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SecondaryTable;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="bankuser")
+@SecondaryTable(name="middle")
+>>>>>>> fcd4c895cc58ff91fa5af67271c42d0c8458c6fa
 public class BankUser {
     
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+<<<<<<< HEAD
 	private int id;
 	@NotNull
 	@Size(min=2)
@@ -43,6 +57,15 @@ public class BankUser {
 	public void setAccount_details(Account_details account_details) {
 		this.account_details = account_details;
 	}
+=======
+	
+	private int id;
+	private String name;
+	private String password;
+	private String email;
+	
+	
+>>>>>>> fcd4c895cc58ff91fa5af67271c42d0c8458c6fa
 	@Override
 	public String toString() {
 		return "BankUser [id=" + id + ", name=" + name + ", password=" + password + ", email=" + email + "]";

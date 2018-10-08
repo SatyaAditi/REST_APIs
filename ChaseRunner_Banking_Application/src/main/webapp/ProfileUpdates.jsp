@@ -7,6 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+<<<<<<< HEAD
 
+=======
+<form action="updatedeposit" method="post">
+
+Amount to Deposit : <input type="text" name="amount_deposited" ><br>
+
+<button>submit</button>
+</form>
+>>>>>>> fcd4c895cc58ff91fa5af67271c42d0c8458c6fa
 </body>
 </html>
