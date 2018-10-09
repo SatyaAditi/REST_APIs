@@ -8,11 +8,18 @@
 </head>
 <body>
 <form action="adduser" method="post">
-Name : <input type="text" name="name">
-Password : <input type="password" name="password">
-Email : <input type="text" name="email">
+Name : <input type="text" name="name"><br>
+Password : <input type="password" name="password"><br>
+Email : <input type="text" name="email"><br>
 <button type="submit">submit</button>
 
 </form>
+
+<h4>Points to remember while signing up</h4><br>
+<ol>
+<li>Password should be atleast 6 characters.</li>
+<li>Email should be unique and belonging to you.</li>
+<li>Please fill out the email in proper email format.</li>
+</ol>
 </body>
 </html>

@@ -4,10 +4,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>
+
+body{
+ background:url(images/bankimage.jpg) no-repeat center center fixed;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        margin: 0;
+        padding: 0;
+  
+        }
+        
+  
+</style>
+
 <title>User Profile</title>
 </head>
 <body>
-<h3>Welcome ${bu.email}</h3>
+<h3 class="font">Welcome ${bu.email}</h3>
 <br>
 <form action="accountinfo" method="post">
 <input type="hidden" value=${bu.email} name="user_email">
@@ -20,7 +36,7 @@
 <hr>
 
 <form action="updatedeposit" method="post">
-<input type="hidden" value=${bu.email} name="user_email">
+<input type="hidden" value=${bu.email} name="user_email"><br>
 Amount to Deposit : <input type="text" name="amount_deposited" ><br>
 
 <button>submit</button>
@@ -28,9 +44,9 @@ Amount to Deposit : <input type="text" name="amount_deposited" ><br>
 </form>
 <hr>
 <form action="updatewithdraw" method="post">
-Where are you paying bills : <input type="text" name="reason">
-<input type="hidden" value=${bu.email} name="user_email1">
-Amount to pay : <input type="text" name="amount_withdrawn">
+Where are you paying bills : <input type="text" name="reason"><br>
+<input type="hidden" value=${bu.email} name="user_email1"><br>
+Amount to pay : <input type="text" name="amount_withdrawn"><br>
 <button> submit </button>
 </form>
 <hr>
@@ -44,7 +60,10 @@ Add amount to send : <input type="text" name="amount"><br>
 
 <button>submit</button>
 </form>
-
+<hr>
+<form action="index.jsp">
+<button>To signout</button>
+</form>
 
 </body>
 
