@@ -5,8 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <style>
+<<<<<<< HEAD
 body{
  background:url(images/bankingimage.jpg) no-repeat center center fixed;
+=======
+
+body{
+ background:url(images/bankimage.jpg) no-repeat center center fixed;
+>>>>>>> 80b2b87d09b815b49ef38385b7482bf6463616ee
         background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -18,10 +24,14 @@ body{
         
   
 </style>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80b2b87d09b815b49ef38385b7482bf6463616ee
 <title>User Profile</title>
 </head>
 <body>
-<h3>Welcome ${bu.email}</h3>
+<h3 class="font">Welcome ${bu.email}</h3>
 <br>
 <form action="accountinfo" method="post">
 <input type="hidden" value=${bu.email} name="user_email">
@@ -34,7 +44,7 @@ body{
 <hr>
 
 <form action="updatedeposit" method="post">
-<input type="hidden" value=${bu.email} name="user_email">
+<input type="hidden" value=${bu.email} name="user_email"><br>
 Amount to Deposit : <input type="text" name="amount_deposited" ><br>
 
 <button>submit</button>
@@ -59,10 +69,16 @@ Add amount to send : <input type="text" name="amount"><br>
 <button>submit</button>
 </form>
 <hr>
+<<<<<<< HEAD
 <form action="home.jsp">
 <button>To signout</button>
 </form>
 
+=======
+<form action="index.jsp">
+<button>To signout</button>
+</form>
+>>>>>>> 80b2b87d09b815b49ef38385b7482bf6463616ee
 
 </body>
 

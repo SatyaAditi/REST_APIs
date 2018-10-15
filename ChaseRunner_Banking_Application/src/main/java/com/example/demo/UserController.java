@@ -8,12 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.servlet.ModelAndView;
 
 //import com.example.models.BankUser;
 
 @RestController
+<<<<<<< HEAD
 
+=======
+@SessionScope
+>>>>>>> 80b2b87d09b815b49ef38385b7482bf6463616ee
 public class UserController {
   
 	@Autowired
@@ -27,10 +32,10 @@ public class UserController {
     String username;
     String password;
 			
-	@RequestMapping("home")
+	@RequestMapping("index")
 	public ModelAndView home()
 	{
-		ModelAndView mv=new ModelAndView("home.jsp");
+		ModelAndView mv=new ModelAndView("index.jsp");
 		System.out.println("hello");
 		return mv;
     }
