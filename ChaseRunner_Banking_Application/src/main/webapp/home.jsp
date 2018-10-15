@@ -4,17 +4,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>
+body{
+ background:url(images/bankingimage.jpg) no-repeat center center fixed;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        margin: 0;
+        padding: 0;
+        }
+</style>
 <title>ChaseRunners:HomePage</title>
 </head>
 <body>
-<h1 align=center> Welcome to ChaseRunners Banking Application </h1><br>
+<h1 >  Welcome to ChaseRunners Banking Application </h1><br>
 
 <hr>
 <h3>Already have an account,please sign in</h3>
 <form action="signin" method="post">
 
-Email : <input type="text" name="email">
-Password : <input type="password" name="password">
+Email : <input type="text" name="email"><br>
+Password : <input type="password" name="password"><br>
 <button type="submit">submit</button>
 
 </form>
@@ -23,7 +34,7 @@ Password : <input type="password" name="password">
 <h3>Or Sign Up</h3>
 <form action="NewUserCreation.jsp">
 
-<button type="submit">submit</button>
+<button type="submit">SignUp</button>
 </form>
 
 </body>

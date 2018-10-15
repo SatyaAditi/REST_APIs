@@ -7,12 +7,11 @@
 <title>Account_Info</title>
 </head>
 <body>
-Name : $(b_u.uname}
-Amount number : ${a_d.account_no}
+
+Amount number : ${a_d.account_no}<br>
 Current Account_balance: ${a_d.account_balance}
 
 
 
-to go back <a href="localhost:8090/Profile.jsp">go back</a>
 </body>
 </html>

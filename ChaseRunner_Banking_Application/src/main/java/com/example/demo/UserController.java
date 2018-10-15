@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 //import com.example.models.BankUser;
 
 @RestController
-@SessionAttributes("name")
+
 public class UserController {
   
 	@Autowired
