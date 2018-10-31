@@ -14,11 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 //import com.example.models.BankUser;
 
 @RestController
-<<<<<<< HEAD
 
-=======
-@SessionScope
->>>>>>> 80b2b87d09b815b49ef38385b7482bf6463616ee
 public class UserController {
   
 	@Autowired
