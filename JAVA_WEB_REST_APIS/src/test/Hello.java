@@ -82,4 +82,19 @@ public class Hello {
 		
 		return response;
 	  }
+	
+	//For Junit Testing purposes
+	public boolean calculate()
+	{
+		int a=3,b=2;
+		if(a>b)
+			return true;
+		else
+			return false;
+		
+	}
+	
+	
+	
+	
 }

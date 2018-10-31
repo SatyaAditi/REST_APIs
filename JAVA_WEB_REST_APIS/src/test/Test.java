@@ -1,6 +1,8 @@
 package test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import java.sql.Connection;
@@ -48,12 +50,25 @@ public class Test
 	
 	Hello h=new Hello();
 	
+	DbManager d=new DbManager();
+	
 	@org.junit.Test
 	public void testing()
 	{
 		assertEquals("this is json", h.sayHelloJASON());
+		
+		assertNotNull("it should not be null", d.getConnection());
+		
+		assertSame("it is same","<h1>This is html</h1>",h.sayHelloHTML());
+		
+		assertTrue("it is true",h.calculate());
+		
+		//Parametrized Testing
+		assertEquals("result", "<html><body><h1>Hello</h1>aditi<br>Credit card approved</body></html>" , h.creditCard("aditi","1234", 10001));
+		
 
 	}
+	
 	
 	
 	
